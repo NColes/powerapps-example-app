@@ -40,3 +40,9 @@ Screen1 As screen:
         Y: =393
         ZIndex: =7
 
+    Icon4 As icon.Cancel:
+        Icon: =Icon.Cancel
+        X: =906
+        Y: =393
+        ZIndex: =8
+
