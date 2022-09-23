@@ -34,3 +34,9 @@ Screen1 As screen:
         Y: =105
         ZIndex: =6
 
+    Icon3 As icon.Add:
+        Icon: =Icon.ThumbsUpFilled
+        X: =810
+        Y: =393
+        ZIndex: =7
+
