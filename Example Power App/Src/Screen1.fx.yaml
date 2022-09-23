@@ -1,20 +1,24 @@
 Screen1 As screen:
-    OnVisible: =Set(varCurrentUserId, Office365Users.MyProfile().Id);
-
-    Component1_1 As Component1:
-        GalleryTable: ='BSP Examples'
+    OnVisible: |-
+        =Set(varCurrentUserId, Office365Users.MyProfile().Id);
+        Set(varUserInfo, LookUp(Users, 'Primary Email' = User().Email));
 
     Label3 As label:
         Height: =57
         Text: =User().Email
         Width: =452
         X: =724
-        Y: =96
         ZIndex: =2
 
     Label4 As label:
         Text: =Office365Users.MyProfileV2().department
         X: =724
-        Y: =153
+        Y: =57
         ZIndex: =3
+
+    Label5 As label:
+        Text: =
+        X: =724
+        Y: =193
+        ZIndex: =4
 

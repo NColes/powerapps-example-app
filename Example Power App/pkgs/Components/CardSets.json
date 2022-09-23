@@ -26,7 +26,7 @@
             "Name": "galleryTemplate1",
             "Parent": "galCards",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 44,
+            "PublishOrderIndex": 216,
             "Rules": [
               {
                 "Category": "Design",
@@ -249,7 +249,7 @@
             "Name": "btnCardTitle",
             "Parent": "galCards",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 45,
+            "PublishOrderIndex": 217,
             "Rules": [
               {
                 "Category": "Data",
@@ -600,7 +600,7 @@
             "Name": "imgCardImage",
             "Parent": "galCards",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 46,
+            "PublishOrderIndex": 218,
             "Rules": [
               {
                 "Category": "Data",
@@ -927,7 +927,7 @@
             "Name": "lblCardDescription",
             "Parent": "galCards",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 47,
+            "PublishOrderIndex": 219,
             "Rules": [
               {
                 "Category": "Data",
@@ -1231,7 +1231,7 @@
         "Name": "galCards",
         "Parent": "CardSets",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 43,
+        "PublishOrderIndex": 215,
         "Rules": [
           {
             "Category": "Data",

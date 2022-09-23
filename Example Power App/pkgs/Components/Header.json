@@ -132,7 +132,7 @@
         "Name": "lblMainHeader",
         "Parent": "Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 62,
+        "PublishOrderIndex": 234,
         "Rules": [
           {
             "Category": "Data",
@@ -474,7 +474,7 @@
         "Name": "imgLandscape",
         "Parent": "Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 63,
+        "PublishOrderIndex": 235,
         "Rules": [
           {
             "Category": "Data",
@@ -855,7 +855,7 @@
         "Name": "btnHome",
         "Parent": "Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 64,
+        "PublishOrderIndex": 236,
         "Rules": [
           {
             "Category": "Data",
@@ -1284,7 +1284,7 @@
         "Name": "btnHelp",
         "Parent": "Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 65,
+        "PublishOrderIndex": 237,
         "Rules": [
           {
             "Category": "Data",
@@ -1666,7 +1666,7 @@
         "Name": "lblSubHeader",
         "Parent": "Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 66,
+        "PublishOrderIndex": 238,
         "Rules": [
           {
             "Category": "Data",
@@ -2050,7 +2050,7 @@
         "Name": "icoMore",
         "Parent": "Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 67,
+        "PublishOrderIndex": 239,
         "Rules": [
           {
             "Category": "Data",
