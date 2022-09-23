@@ -1,0 +1,156 @@
+Header As CanvasComponent:
+    Fill: =RGBA(0,120,212,1)
+    HeaderLogo: =
+    Height: |
+        =141
+    HelpLinkText: ="Help"
+    HelpLinkWidth: =70
+    HelpScreen: =App.ActiveScreen
+    HomeLinkText: ="Home"
+    HomeLinkWidth: =70
+    HomeScreen: =App.ActiveScreen
+    MainHeaderText: ="Main header"
+    MoreScreen: =App.ActiveScreen
+    OnReset: =
+    ScreenSize: =4
+    ShowHeaderLogo: =true
+    ShowMoreIcon: =false
+    SubHeaderText: ="Sub header"
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =2
+
+    lblSubHeader As label:
+        Align: =Align.Center
+        Color: =White
+        Fill: =RGBA(32, 96, 149, 1)
+        FocusedBorderColor: =lblSubHeader.BorderColor
+        Font: =Font.'Segoe UI'
+        Height: =95
+        HoverBorderColor: =lblSubHeader.BorderColor
+        HoverColor: =lblSubHeader.Color
+        HoverFill: =lblSubHeader.Fill
+        PressedBorderColor: =lblSubHeader.BorderColor
+        PressedColor: =lblSubHeader.Color
+        PressedFill: =lblSubHeader.Fill
+        Size: |+
+            =
+            Switch(
+                Header.ScreenSize,
+                ScreenSize.Small,
+                15,
+                ScreenSize.Medium,
+                20,
+                20
+            )
+            
+            
+            
+        Text: =Header.SubHeaderText
+        Width: =Parent.Width
+        X: =Parent.Width / 2 - lblSubHeader.Width / 2
+        Y: =lblMainHeader.Height
+        ZIndex: =1
+
+    lblMainHeader As label:
+        Align: =Align.Center
+        Color: =White
+        Fill: =RGBA(0, 60, 87, 1)
+        FocusedBorderColor: =lblMainHeader.BorderColor
+        Font: =Font.'Segoe UI'
+        Height: =46
+        HoverBorderColor: =lblMainHeader.BorderColor
+        HoverColor: =lblMainHeader.Color
+        HoverFill: =lblMainHeader.Fill
+        PressedBorderColor: =lblMainHeader.BorderColor
+        PressedColor: =lblMainHeader.Color
+        PressedFill: =lblMainHeader.Fill
+        Size: |+
+            =
+            Switch(
+                Header.ScreenSize,
+                ScreenSize.Small,
+                15,
+                ScreenSize.Medium,
+                20,
+                20
+            )
+            
+            
+            
+        Text: =Header.MainHeaderText
+        Width: =Parent.Width
+        X: =Parent.Width / 2 - lblMainHeader.Width / 2
+        ZIndex: =2
+
+    imgLandscape As image:
+        Height: =46
+        Image: =Header.HeaderLogo
+        Visible: =Header.ShowHeaderLogo
+        Width: =320
+        X: |
+            =70
+        ZIndex: =3
+
+    icoMore As icon.More:
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledFill: =icoMore.Fill
+        FocusedBorderColor: =icoMore.BorderColor
+        Height: =95
+        HoverBorderColor: =ColorFade(icoMore.BorderColor, 20%)
+        HoverColor: =ColorFade(icoMore.Color, 20%)
+        HoverFill: =icoMore.Fill
+        Icon: =Icon.More
+        OnSelect: =Navigate(Header.MoreScreen,ScreenTransition.CoverRight)
+        PaddingBottom: =Header.Height / 3.5
+        PaddingLeft: =Header.Height / 3.5
+        PaddingRight: =Header.Height / 3.5
+        PaddingTop: =Header.Height / 3.5
+        PressedBorderColor: =ColorFade(icoMore.BorderColor, -20%)
+        PressedColor: =ColorFade(icoMore.Color, -20%)
+        PressedFill: =icoMore.Fill
+        Visible: =Header.ShowMoreIcon
+        Width: =Header.Height
+        X: =Header.Width - icoMore.Width
+        Y: =46
+        ZIndex: =6
+
+    btnHelp As button:
+        BorderStyle: =BorderStyle.None
+        Fill: =lblMainHeader.Fill
+        FontWeight: =FontWeight.Normal
+        Height: =lblMainHeader.Height - 5
+        OnSelect: =Navigate(Header.HelpScreen)
+        PressedFill: |-
+            =ColorValue("#e6ecee")
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =13
+        Text: =Header.HelpLinkText
+        Underline: =true
+        Width: =Header.HelpLinkWidth
+        X: =Header.Width - btnHelp.Width - 70
+        ZIndex: =7
+
+    btnHome As button:
+        BorderStyle: =BorderStyle.None
+        Fill: =lblMainHeader.Fill
+        FontWeight: =FontWeight.Normal
+        Height: =lblMainHeader.Height - 5
+        OnSelect: =Navigate(Header.HomeScreen)
+        PressedFill: |-
+            =ColorValue("#e6ecee")
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =13
+        Text: =Header.HomeLinkText
+        Underline: =true
+        Width: =Header.HomeLinkWidth
+        X: =btnHelp.X - btnHome.Width - 10
+        ZIndex: =8
+

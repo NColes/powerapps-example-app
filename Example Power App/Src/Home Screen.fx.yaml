@@ -1,0 +1,80 @@
+"'Home Screen' As screen":
+    OnVisible: |
+        =Set(
+            colHomeScreenMenu,
+            Table(
+                {
+                    CardID: 1,
+                    CardTitle: "Gallery filtering",
+                    CardDescription: "An example of how to style filter a gallery in a managable, extendable way.",
+                    CardImage: "",
+                    CardImageAltText: "",
+                    CardScreen: 'Gallery Filtering Screen',
+                    IsVisible: true,
+                    ErrorMessages: ""
+                },
+                {
+                    CardID: 2,
+                    CardTitle: "Second item",
+                    CardDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu laoreet felis, quis facilisis arcu. Duis est tortor, tristique nec pulvinar quis, tempus lacinia sem. Mauris et lorem aliquet, ullamcorper libero posuere, vestibulum risus. Nunc maximus elit ac mauris hendrerit, nec volutpat mi accumsan. Pellentesque faucibus dui vitae eros consequat auctor. Aliquam porttitor nulla gravida, mollis erat in, tincidunt est. Morbi at nunc quis leo vehicula bibendum vel at turpis. Suspendisse sit amet ex vitae orci elementum condimentum. \nUt ac ligula quis quam convallis sollicitudin. Proin maximus massa quis justo feugiat, vel auctor mauris aliquam. Sed varius purus quis dui.",
+                    CardImage: "",
+                    CardImageAltText: "",
+                    CardScreen: App.ActiveScreen,
+                    IsVisible: true,
+                    ErrorMessages: ""
+                },
+                {
+                    CardID: 3,
+                    CardTitle: "Third item",
+                    CardDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu laoreet felis, quis facilisis arcu. Duis est tortor, tristique nec pulvinar quis, tempus lacinia sem. Mauris et lorem aliquet, ullamcorper libero posuere, vestibulum risus. Nunc maximus elit ac mauris hendrerit, nec volutpat mi accumsan. Pellentesque faucibus dui vitae eros consequat auctor. Aliquam porttitor nulla gravida, mollis erat in, tincidunt est. Morbi at nunc quis leo vehicula bibendum vel at turpis. Suspendisse sit amet ex vitae orci elementum condimentum. \nUt ac ligula quis quam convallis sollicitudin. Proin maximus massa quis justo feugiat, vel auctor mauris aliquam. Sed varius purus quis dui.",
+                    CardImage: "",
+                    CardImageAltText: "",
+                    CardScreen: App.ActiveScreen,
+                    IsVisible: true,
+                    ErrorMessages: ""
+                },
+                {
+                    CardID: 4,
+                    CardTitle: "Fourth item",
+                    CardDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu laoreet felis, quis facilisis arcu. Duis est tortor, tristique nec pulvinar quis, tempus lacinia sem. Mauris et lorem aliquet, ullamcorper libero posuere, vestibulum risus. Nunc maximus elit ac mauris hendrerit, nec volutpat mi accumsan. Pellentesque faucibus dui vitae eros consequat auctor. Aliquam porttitor nulla gravida, mollis erat in, tincidunt est. Morbi at nunc quis leo vehicula bibendum vel at turpis. Suspendisse sit amet ex vitae orci elementum condimentum. \nUt ac ligula quis quam convallis sollicitudin. Proin maximus massa quis justo feugiat, vel auctor mauris aliquam. Sed varius purus quis dui.",
+                    CardImage: "",
+                    CardImageAltText: "",
+                    CardScreen: App.ActiveScreen,
+                    IsVisible: true,
+                    ErrorMessages: ""
+                },
+                {
+                    CardID: 5,
+                    CardTitle: "Fifth item",
+                    CardDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu laoreet felis, quis facilisis arcu. Duis est tortor, tristique nec pulvinar quis, tempus lacinia sem. Mauris et lorem aliquet, ullamcorper libero posuere, vestibulum risus. Nunc maximus elit ac mauris hendrerit, nec volutpat mi accumsan. Pellentesque faucibus dui vitae eros consequat auctor. Aliquam porttitor nulla gravida, mollis erat in, tincidunt est. Morbi at nunc quis leo vehicula bibendum vel at turpis. Suspendisse sit amet ex vitae orci elementum condimentum. \nUt ac ligula quis quam convallis sollicitudin. Proin maximus massa quis justo feugiat, vel auctor mauris aliquam. Sed varius purus quis dui.",
+                    CardImage: "",
+                    CardImageAltText: "",
+                    CardScreen: App.ActiveScreen,
+                    IsVisible: true,
+                    ErrorMessages: ""
+                },
+                {
+                    CardID: 6,
+                    CardTitle: "Sixth item",
+                    CardDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu laoreet felis, quis facilisis arcu. Duis est tortor, tristique nec pulvinar quis, tempus lacinia sem. Mauris et lorem aliquet, ullamcorper libero posuere, vestibulum risus. Nunc maximus elit ac mauris hendrerit, nec volutpat mi accumsan. Pellentesque faucibus dui vitae eros consequat auctor. Aliquam porttitor nulla gravida, mollis erat in, tincidunt est. Morbi at nunc quis leo vehicula bibendum vel at turpis. Suspendisse sit amet ex vitae orci elementum condimentum. \nUt ac ligula quis quam convallis sollicitudin. Proin maximus massa quis justo feugiat, vel auctor mauris aliquam. Sed varius purus quis dui.",
+                    CardImage: "",
+                    CardImageAltText: "",
+                    CardScreen: App.ActiveScreen,
+                    IsVisible: true,
+                    ErrorMessages: ""
+                }
+            )
+        );
+
+    cmbHeaderHome As Header:
+        MainHeaderText: =AppConfig.HeaderText
+        SubHeaderText: ="Welcome to the example app " & gblCurrentUserEmail
+        ZIndex: =1
+
+    cmpCardSetsHome As CardSets:
+        Height: =627
+        Items: =colHomeScreenMenu
+        Width: =1366
+        Y: =141
+        ZIndex: =2
+

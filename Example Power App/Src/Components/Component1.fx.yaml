@@ -1,0 +1,312 @@
+Component1 As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    GalleryTable: |-
+        =Table({SampleStringField: "SampleText", SampleNumberField: 10, SampleBooleanField: true})
+    Height: =640
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    "'Filters Container_1' As groupContainer.horizontalAutoLayoutContainer":
+        Height: =Parent.Height - cmpHeaderGalleryFiltering.Height
+        LayoutMode: =LayoutMode.Auto
+        Width: =640
+        Y: =13
+        ZIndex: =1
+
+        "galExampleItems_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+            Items: =Component1.GalleryTable
+            Layout: =Layout.Vertical
+            LayoutMinHeight: =287
+            LayoutMinWidth: =320
+            ShowNavigation: =true
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =70
+            ZIndex: =1
+
+            lblTitle_1 As label:
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =13
+                Text: =ThisItem.Title
+                VerticalAlign: =VerticalAlign.Top
+                Width: =Parent.TemplateWidth - 110
+                X: =18
+                Y: =14
+                ZIndex: =2
+
+            NextArrow1_1 As icon.ChevronRight:
+                AccessibleLabel: =Self.Tooltip
+                Height: =60
+                Icon: =Icon.ChevronRight
+                OnSelect: =Select(Parent)
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                TabIndex: =0
+                Tooltip: ="View item details"
+                Width: =60
+                X: =Parent.TemplateWidth - Self.Width - 5
+                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                ZIndex: =4
+
+            Separator1_1 As rectangle:
+                Height: =1
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - 1
+                ZIndex: =5
+
+            SubmittedDate_1 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =7
+
+                lblDateSubmitted_1 As label:
+                    Height: =Self.Size * 1.8
+                    LineHeight: =1
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =ThisItem.'Submitted Date'
+                    VerticalAlign: =VerticalAlign.Top
+                    X: =lblReferenceNo_1.X + lblReferenceNo_1.Width + 35
+                    Y: =lblTitle_1.Y + lblTitle_1.Height + 8
+                    ZIndex: =3
+
+                icoDateSubmitted_1 As icon.Clock:
+                    Height: =16
+                    Icon: =Icon.Clock
+                    OnSelect: =Select(Parent)
+                    Width: =16
+                    X: =lblDateSubmitted_1.X - 30
+                    Y: =lblDateSubmitted_1.Y
+                    ZIndex: =6
+
+            ReferenceNumber_1 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =9
+
+                lblReferenceNo_1 As label:
+                    Height: =Self.Size * 1.8
+                    LineHeight: =1
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =ThisItem.'Reference Number'
+                    VerticalAlign: =VerticalAlign.Top
+                    X: =46
+                    Y: =lblTitle_1.Y + lblTitle_1.Height + 8
+                    ZIndex: =7
+
+                icoReferenceNo_1 As icon.Clock:
+                    Height: =16
+                    Icon: =Icon.Message
+                    OnSelect: =Select(Parent)
+                    Width: =16
+                    X: =lblReferenceNo_1.X - 30
+                    Y: =lblReferenceNo_1.Y
+                    ZIndex: =8
+
+            AssignedUser_1 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =11
+
+                lblAssignedUser_1 As label:
+                    Height: =Self.Size * 1.8
+                    LineHeight: =1
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =Proper(First(Split(ThisItem.'Assigned User', "@")).Result)
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =200
+                    X: =lblDateSubmitted_1.X + lblDateSubmitted_1.Width + 35
+                    Y: =lblTitle_1.Y + lblTitle_1.Height + 8
+                    ZIndex: =9
+
+                icoAssignedUser_1 As icon.Clock:
+                    Height: =16
+                    Icon: =Icon.Person
+                    OnSelect: =Select(Parent)
+                    Width: =16
+                    X: =lblAssignedUser_1.X - 30
+                    Y: =lblAssignedUser_1.Y
+                    ZIndex: =10
+
+            Status_1 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =13
+
+                lblStatus_1 As label:
+                    Height: =Self.Size * 1.8
+                    LineHeight: =1
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =ThisItem.'Example status'
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =200
+                    X: =410
+                    Y: =lblTitle_1.Y + lblTitle_1.Height + 8
+                    ZIndex: =11
+
+                icoExampleStatus_1 As icon.Clock:
+                    Height: =16
+                    Icon: =Icon.Flag
+                    OnSelect: =Select(Parent)
+                    Width: =16
+                    X: =410
+                    Y: =lblStatus_1.Y
+                    ZIndex: =12
+
+        pnlFilter_1 As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(233, 239, 244, 1)
+            FillPortions: =0
+            Height: =Parent.Height
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            Visible: =varShowFilterPane
+            Width: =350
+            ZIndex: =2
+
+            lblFilters_1 As label:
+                Color: |-
+                    =ColorValue("#206095")
+                FontWeight: =FontWeight.Bold
+                Text: |-
+                    ="Filters:"
+                Y: =8
+                ZIndex: =1
+
+            lblSearchText_1 As label:
+                FontWeight: =FontWeight.Bold
+                Size: =11
+                Text: |-
+                    ="Search text:"
+                Width: =Parent.Width * 0.95
+                X: =6
+                Y: =48
+                ZIndex: =2
+
+            txtSearchText_1 As text:
+                BorderThickness: =1
+                Color: =AppConfig.PrimaryTextColor
+                Default: =""
+                HintText: ="Search by ref, assigned user"
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: ="Search the data for text"
+                Width: =Parent.Width * 0.95
+                X: =8
+                Y: =88
+                ZIndex: =3
+
+            icoClose_1 As icon.Cancel:
+                BorderColor: =RGBA(32, 96, 149, 1)
+                Color: |-
+                    =ColorValue("#206095")
+                Height: =32
+                Icon: =Icon.Cancel
+                OnSelect: =Set(varShowFilterPane, false)
+                Width: =32
+                X: =308
+                Y: =12
+                ZIndex: =4
+
+            lblSearchStatus_2 As label:
+                FontWeight: =FontWeight.Bold
+                Size: =11
+                Text: |-
+                    ="Status:"
+                Width: =Parent.Width * 0.95
+                X: =8
+                Y: =142
+                ZIndex: =5
+
+            galSearchStatus_1 As gallery.galleryVertical:
+                Height: =87
+                Items: =colFormStatus
+                Layout: =Layout.Vertical
+                TemplatePadding: =0
+                TemplateSize: =40
+                Width: =350
+                WrapCount: =2
+                Y: =182
+                ZIndex: =6
+
+                chkSearchStatus_1 As checkbox:
+                    Default: =ThisItem in colSearchStatus
+                    Height: =Parent.TemplateHeight
+                    OnCheck: =Collect(colSearchStatus, ThisItem);
+                    OnSelect: =Select(Parent)
+                    OnUncheck: =Remove(colSearchStatus, ThisItem);
+                    Text: =ThisItem.Value
+                    Width: =(Parent.Width - 20) / 2
+                    ZIndex: =1
+
+            cmbSearchStatus_1 As combobox:
+                DefaultSelectedItems: =colSearchStatus.Value
+                DisplayFields: =["Value"]
+                DisplayMode: =DisplayMode.View
+                IsSearchable: =false
+                Items: =colFormStatus
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                X: =6
+                Y: =314
+                ZIndex: =7
+
+            lblSearchStatus_3 As label:
+                FontWeight: =FontWeight.Bold
+                Size: =11
+                Text: |-
+                    ="DEV List of selected status':"
+                Width: =Parent.Width * 0.95
+                X: =4
+                Y: =269
+                ZIndex: =8
+
+            Icon2_1 As icon.Post:
+                BorderColor: =RGBA(32, 96, 149, 1)
+                Color: =RGBA(32, 96, 149, 1)
+                Height: =32
+                Icon: =Icon.Reset
+                OnSelect: =Reset(txtSearchText_1);Reset(cmbSearchStatus_1);Clear(colSearchStatus);
+                Width: =32
+                X: =267
+                Y: =12
+                ZIndex: =9
+

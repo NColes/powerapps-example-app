@@ -1,0 +1,180 @@
+Theme As CanvasComponent:
+    AccentColor1: =RGBA(0,120,212,1)
+    AccentColor2: =RGBA(0, 0, 0, 1)
+    AccentColor3: =RGBA(242,242, 242,1)
+    BackgroundColor1: =If(Theme.DarkMode, RGBA(0, 60, 87, 1), RGBA(0, 60, 87, 1))
+    BackgroundColor2: =If(Theme.DarkMode,RGBA(32, 96, 149, 1), RGBA(32, 96, 149, 1))
+    BackgroundColor3: =RGBA(168, 189, 58, 1)
+    BorderColor1: =RGBA(226, 226, 227, 1)
+    BorderColor2: =RGBA(245, 245, 246, 1)
+    DarkMode: =false
+    Fill: =RGBA(0, 0, 0, 0)
+    FocusBorderColor: =RGBA(0,120,212,1)
+    Height: =App.Height
+    OnReset: =
+    PrimaryTextColor: =RGBA(34, 34, 34, 1)
+    SecondaryTextColor: =RGBA(112, 112, 113, 1)
+    SeparatorColor: =RGBA(230, 236, 238, 1)
+    TertiaryTextColor: =RGBA(0, 0, 0, 1)
+    Theme: |-
+        =Table(
+            {
+                Name: "Background Color 1",
+                Key: "BackgroundColor1",
+                Color: Theme.BackgroundColor1,
+                Desc: ""
+            },
+            {
+                Name: "Background Color 2",
+                Key: "BackgroundColor2",
+                Color: Theme.BackgroundColor2,
+                Desc: ""
+            },
+            {
+                Name: "Background Color 3",
+                Key: "BackgroundColor3",
+                Color: Theme.BackgroundColor3,
+                Desc: ""
+            },
+            {
+                Name: "Accent Color 1",
+                Key: "AccentColor1",
+                Color: Theme.AccentColor1,
+                Desc: ""
+            },
+            {
+                Name: "Accent Color 2",
+                Key: "AccentColor2",
+                Color: Theme.AccentColor2,
+                Desc: ""
+            },
+            {
+                Name: "Accent Color 3",
+                Key: "AccentColor3",
+                Color: Theme.AccentColor3,
+                Desc: "AccentColor3"
+            },
+            {
+                Name: "Primary Text Color",
+                Key: "PrimaryTextColor",
+                Color: Theme.PrimaryTextColor,
+                Desc: ""
+            },
+            {
+                Name: "Secondary Text Color",
+                Key: "SecondaryTextColor",
+                Color: Theme.SecondaryTextColor,
+                Desc: ""
+            },
+            {
+                Name: "Tertiary Text Color",
+                Key: "TertiaryTextColor",
+                Color: Theme.TertiaryTextColor,
+                Desc: ""
+            },
+            {
+                Name: "Focus Border Color",
+                Key: "FocusBorderColor",
+                Color: Theme.FocusBorderColor,
+                Desc: ""
+            },
+            {
+                Name: "Border Color 1",
+                Key: "BorderColor1",
+                Color: Theme.BorderColor1,
+                Desc: ""
+            },
+            {
+                Name: "Border Color 2",
+                Key: "BorderColor2",
+                Color: Theme.BorderColor2,
+                Desc: ""
+            },
+            {
+                Name: "Separator Color",
+                Key: "SeparatorColor",
+                Color: Theme.SeparatorColor,
+                Desc: ""
+            },
+            {
+                Name: "Validation Error Color",
+                Key: "ValidationErrorColor",
+                Color: Theme.ValidationErrorColor,
+                Desc: ""
+            },
+            {
+                Name: "Validation Error Highlight Color",
+                Key: "ValidationErrorHighlightColor",
+                Color: Theme.ValidationErrorHighlightColor,
+                Desc: ""
+            }
+        )
+    ValidationErrorColor: =RGBA(208, 2, 27, 1)
+    ValidationErrorHighlightColor: =RGBA(250, 230, 232, 1)
+    Width: =1300
+    X: =0
+    Y: =0
+    ZIndex: =5
+
+    "galTheme As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        DisabledBorderColor: =galTheme.BorderColor
+        DisabledFill: =galTheme.Fill
+        Height: =Theme.Height
+        HoverBorderColor: =galTheme.BorderColor
+        HoverFill: =galTheme.Fill
+        Items: =Theme.Theme
+        Layout: =Layout.Vertical
+        LoadingSpinnerColor: =galTheme.BorderColor
+        PressedBorderColor: =galTheme.BorderColor
+        PressedFill: =galTheme.Fill
+        TemplatePadding: =0
+        TemplateSize: =Min(160, galTheme.Height - 60)
+        Width: =Theme.Width
+        ZIndex: =1
+
+        rectSeparator As rectangle:
+            DisabledFill: =rectSeparator.Fill
+            FocusedBorderColor: =rectSeparator.BorderColor
+            Height: =1
+            HoverFill: =rectSeparator.Fill
+            OnSelect: =Select(Parent)
+            PressedFill: =rectSeparator.Fill
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =1
+
+        rectColor As rectangle:
+            BorderThickness: =0.2
+            DisabledFill: =rectColor.Fill
+            Fill: =ThisItem.Color
+            FocusedBorderColor: =rectColor.BorderColor
+            Height: =158
+            HoverFill: =rectColor.Fill
+            OnSelect: =Select(Parent)
+            PressedFill: =rectColor.Fill
+            Width: =Parent.Width - Self.X
+            X: =366
+            ZIndex: =2
+
+        lblColorName As label:
+            AutoHeight: =true
+            FocusedBorderColor: =lblColorName.BorderColor
+            Height: =43
+            HoverBorderColor: =lblColorName.BorderColor
+            HoverColor: =lblColorName.Color
+            HoverFill: =lblColorName.Fill
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =lblColorName.BorderColor
+            PressedColor: =lblColorName.Color
+            PressedFill: =lblColorName.Fill
+            Text: =ThisItem.Name
+            VerticalAlign: =VerticalAlign.Top
+            Width: =360
+            X: =5
+            Y: =galTheme.TemplateHeight / 2 - Self.Height / 2
+            ZIndex: =3
+

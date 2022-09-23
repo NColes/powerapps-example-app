@@ -1,0 +1,183 @@
+{
+  "ComponentAllowCustomization": true,
+  "ComponentChangedSinceFileImport": false,
+  "ComponentManifest": {
+    "AllowAccessToGlobals": false,
+    "AllowCustomization": true,
+    "Description": "",
+    "Name": "Theme",
+    "TemplateGuid": "82ec3d1e81674f84a8636064ba295776"
+  },
+  "ComponentType": "CanvasComponent",
+  "CustomGroupControlTemplateName": "",
+  "CustomProperties": [
+    {
+      "Category": 0,
+      "DisplayName": "Background Color 1",
+      "Hidden": true,
+      "Name": "BackgroundColor1",
+      "PropertyDataTypeKey": "Color",
+      "Tooltip": "Background Color 1",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Background Color 2",
+      "Hidden": true,
+      "Name": "BackgroundColor2",
+      "PropertyDataTypeKey": "Color",
+      "Tooltip": "Background Color 2",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Background Color 3",
+      "Hidden": true,
+      "Name": "BackgroundColor3",
+      "PropertyDataTypeKey": "Color",
+      "Tooltip": "Background Color 3",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Accent Color 1",
+      "Hidden": true,
+      "Name": "AccentColor1",
+      "PropertyDataTypeKey": "Color",
+      "Tooltip": "Accent Color 1",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Accent Color 2",
+      "Hidden": true,
+      "Name": "AccentColor2",
+      "PropertyDataTypeKey": "Color",
+      "Tooltip": "Accent Color 2",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Accent Color 3",
+      "Hidden": true,
+      "Name": "AccentColor3",
+      "PropertyDataTypeKey": "Color",
+      "Tooltip": "Accent Color 3",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Primary Text Color",
+      "Hidden": true,
+      "Name": "PrimaryTextColor",
+      "PropertyDataTypeKey": "Color",
+      "Tooltip": "Primary Text Color",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Secondary Text Color",
+      "Hidden": true,
+      "Name": "SecondaryTextColor",
+      "PropertyDataTypeKey": "Color",
+      "Tooltip": "Secondary Text Color",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Tertiary Text Color",
+      "Hidden": true,
+      "Name": "TertiaryTextColor",
+      "PropertyDataTypeKey": "Color",
+      "Tooltip": "Tertiary Text Color",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Focus Border Color",
+      "Hidden": true,
+      "Name": "FocusBorderColor",
+      "PropertyDataTypeKey": "Color",
+      "Tooltip": "Focus Border Color",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Border Color 1",
+      "Hidden": true,
+      "Name": "BorderColor1",
+      "PropertyDataTypeKey": "Color",
+      "Tooltip": "Border Color 1",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Border Color 2",
+      "Hidden": true,
+      "Name": "BorderColor2",
+      "PropertyDataTypeKey": "Color",
+      "Tooltip": "Border Color 2",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Separator Color",
+      "Hidden": true,
+      "Name": "SeparatorColor",
+      "PropertyDataTypeKey": "Color",
+      "Tooltip": "Separator Color",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Validation Error Color",
+      "Hidden": true,
+      "Name": "ValidationErrorColor",
+      "PropertyDataTypeKey": "Color",
+      "Tooltip": "Validation Error Color",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Dark Mode",
+      "Hidden": false,
+      "Name": "DarkMode",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "Dark Mode",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Validation Error Highlight Color",
+      "Hidden": true,
+      "Name": "ValidationErrorHighlightColor",
+      "PropertyDataTypeKey": "Color",
+      "Tooltip": "Validation Error Highlight Color",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Theme",
+      "Hidden": true,
+      "Name": "Theme",
+      "PropertyDataTypeKey": "Table",
+      "Tooltip": "Theme",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Color\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Desc\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Name\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
+    }
+  ],
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/Component",
+  "IsComponentLocked": true,
+  "IsComponentTemplate": true,
+  "IsCustomGroupControlTemplate": false,
+  "IsPcfControl": false,
+  "IsPremiumPcfControl": false,
+  "IsWidgetTemplate": false,
+  "LastModifiedTimestamp": "637995287558263273",
+  "Name": "82ec3d1e81674f84a8636064ba295776",
+  "OverridableProperties": {},
+  "SourceLibraryId": "72e82c63-2646-4d05-93e9-c1ea5a243340",
+  "SourceLibraryLogicalName": "ons_onscomponents_21145",
+  "TemplateOriginalName": "9ab1aea2ae29414dbc0307da1d3b92d0",
+  "Version": "637677413612165423"
+}

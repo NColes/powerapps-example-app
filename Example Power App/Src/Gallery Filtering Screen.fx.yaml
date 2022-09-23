@@ -1,0 +1,400 @@
+"'Gallery Filtering Screen' As screen":
+    OnVisible: |-
+        =Set(varFormMode, FormMode.New);
+        Set(varDisplayMode, DisplayMode.Edit);
+        //varUnassignedUserDisplayName is a string used to display where an item is unassigned
+        Set(varUnassignedUserDisplayName, "Unassigned");
+        //colFormStatus is used to populate the filter checkboxes
+        ClearCollect(colFormStatus, ["Draft","Submitted","Assigned","Completed"]);
+        //colOutcomeStatus is using a OptionSet
+        ClearCollect(colOutcomeStatus, {OptionsText: "Approved"},{OptionsText: "Rejected"});
+
+    cmpHeaderGalleryFiltering As Header:
+        MainHeaderText: =AppConfig.HeaderText
+        SubHeaderText: ="Handling filtering"
+        ZIndex: =1
+
+    "'Filters Container' As groupContainer.horizontalAutoLayoutContainer":
+        Height: =Parent.Height - cmpHeaderGalleryFiltering.Height
+        LayoutMode: =LayoutMode.Auto
+        Width: =1366
+        Y: =141
+        ZIndex: =2
+
+        "galExampleItems As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+            Items: |-
+                =Search(
+                    Sort(
+                        Filter(
+                            'BSP Examples',
+                            //We can use the previously set gblCurrentUserEmail to target the user as a level of psuedo-permissions.
+                            //'Assigned User' = gblCurrentUserEmail
+                            //Used for testing to allow us to show all items. cbxShowMyItems to toggle
+                            (cbxShowMyItems.Value || 'Assigned User' = gblCurrentUserEmail)
+                            &&
+                            //By chaining logic we can ensure that a control has a value entered before filtering
+                            (
+                                IsBlank(cmbSearchStatus.SelectedItems.Value) ||
+                                IsEmpty(cmbSearchStatus.SelectedItems) ||
+                                'Example status' in cmbSearchStatus.SelectedItems.Value
+                            ) &&
+                            (
+                                Outcome = Dropdown1.Selected.Result
+                            )
+                        ),
+                        'Reference Number',
+                        Descending
+                    ),
+                    txtSearchText.Text,
+                    //Columns to search for our text input
+                    "new_assigneduser"
+                )
+            Layout: =Layout.Vertical
+            LayoutMinHeight: =287
+            LayoutMinWidth: =320
+            ShowNavigation: =true
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =70
+            ZIndex: =1
+
+            lblTitle As label:
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =13
+                Text: =ThisItem.Title
+                VerticalAlign: =VerticalAlign.Top
+                Width: =Parent.TemplateWidth - 110
+                X: =18
+                Y: =14
+                ZIndex: =2
+
+            NextArrow1 As icon.ChevronRight:
+                AccessibleLabel: =Self.Tooltip
+                Height: =60
+                Icon: =Icon.ChevronRight
+                OnSelect: =Select(Parent)
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                TabIndex: =0
+                Tooltip: ="View item details"
+                Width: =60
+                X: =Parent.TemplateWidth - Self.Width - 5
+                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                ZIndex: =4
+
+            Separator1 As rectangle:
+                Height: =1
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - 1
+                ZIndex: =5
+
+            SubmittedDate As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =7
+
+                lblDateSubmitted As label:
+                    Height: =Self.Size * 1.8
+                    LineHeight: =1
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =ThisItem.'Submitted Date'
+                    VerticalAlign: =VerticalAlign.Top
+                    X: =lblReferenceNo.X + lblReferenceNo.Width + 35
+                    Y: =lblTitle.Y + lblTitle.Height + 8
+                    ZIndex: =3
+
+                icoDateSubmitted As icon.Clock:
+                    Height: =16
+                    Icon: =Icon.Clock
+                    OnSelect: =Select(Parent)
+                    Width: =16
+                    X: =lblDateSubmitted.X - 30
+                    Y: =lblDateSubmitted.Y
+                    ZIndex: =6
+
+            ReferenceNumber As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =9
+
+                lblReferenceNo As label:
+                    Height: =Self.Size * 1.8
+                    LineHeight: =1
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =ThisItem.'Reference Number'
+                    VerticalAlign: =VerticalAlign.Top
+                    X: =46
+                    Y: =lblTitle.Y + lblTitle.Height + 8
+                    ZIndex: =7
+
+                icoReferenceNo As icon.Clock:
+                    Height: =16
+                    Icon: =Icon.Message
+                    OnSelect: =Select(Parent)
+                    Width: =16
+                    X: =lblReferenceNo.X - 30
+                    Y: =lblReferenceNo.Y
+                    ZIndex: =8
+
+            AssignedUser As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =11
+
+                lblAssignedUser As label:
+                    Height: =Self.Size * 1.8
+                    LineHeight: =1
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =Proper(First(Split(ThisItem.'Assigned User', "@")).Result)
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =200
+                    X: =lblDateSubmitted.X + lblDateSubmitted.Width + 35
+                    Y: =lblTitle.Y + lblTitle.Height + 8
+                    ZIndex: =9
+
+                icoAssignedUser As icon.Clock:
+                    Height: =16
+                    Icon: =Icon.Person
+                    OnSelect: =Select(Parent)
+                    Width: =16
+                    X: =lblAssignedUser.X - 30
+                    Y: =lblAssignedUser.Y
+                    ZIndex: =10
+
+            Label2 As label:
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.Outcome
+                X: =801
+                ZIndex: =13
+
+            Status As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =13
+
+                lblStatus As label:
+                    Height: =Self.Size * 1.8
+                    LineHeight: =1
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =ThisItem.'Example status'
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =200
+                    X: =lblAssignedUser.X + lblAssignedUser.Width + 35
+                    Y: =lblTitle.Y + lblTitle.Height + 8
+                    ZIndex: =11
+
+                icoExampleStatus As icon.Clock:
+                    Height: =16
+                    Icon: =Icon.Flag
+                    OnSelect: =Select(Parent)
+                    Width: =16
+                    X: =lblStatus.X - 30
+                    Y: =lblStatus.Y
+                    ZIndex: =12
+
+        pnlFilter As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(233, 239, 244, 1)
+            FillPortions: =0
+            Height: =Parent.Height
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            Visible: =varShowFilterPane
+            Width: =350
+            ZIndex: =2
+
+            lblFilters As label:
+                Color: |-
+                    =ColorValue("#206095")
+                FontWeight: =FontWeight.Bold
+                Text: |-
+                    ="Filters:"
+                Y: =8
+                ZIndex: =1
+
+            lblSearchText As label:
+                FontWeight: =FontWeight.Bold
+                Size: =11
+                Text: |-
+                    ="Search text:"
+                Width: =Parent.Width * 0.95
+                X: =6
+                Y: =48
+                ZIndex: =2
+
+            txtSearchText As text:
+                BorderThickness: =1
+                Color: =AppConfig.PrimaryTextColor
+                Default: =""
+                HintText: ="Search by ref, assigned user"
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: ="Search the data for text"
+                Width: =Parent.Width * 0.95
+                X: =8
+                Y: =88
+                ZIndex: =3
+
+            icoClose As icon.Cancel:
+                BorderColor: =RGBA(32, 96, 149, 1)
+                Color: |-
+                    =ColorValue("#206095")
+                Height: =32
+                Icon: =Icon.Cancel
+                OnSelect: =Set(varShowFilterPane, false)
+                Width: =32
+                X: =308
+                Y: =12
+                ZIndex: =4
+
+            lblSearchStatus As label:
+                FontWeight: =FontWeight.Bold
+                Size: =11
+                Text: |-
+                    ="Status:"
+                Width: =Parent.Width * 0.95
+                X: =8
+                Y: =142
+                ZIndex: =5
+
+            galSearchStatus As gallery.galleryVertical:
+                Height: =87
+                Items: =colFormStatus
+                Layout: =Layout.Vertical
+                TemplatePadding: =0
+                TemplateSize: =40
+                Width: =350
+                WrapCount: =2
+                Y: =182
+                ZIndex: =6
+
+                chkSearchStatus As checkbox:
+                    Default: =ThisItem in colSearchStatus
+                    Height: =Parent.TemplateHeight
+                    OnCheck: =Collect(colSearchStatus, ThisItem);
+                    OnSelect: =Select(Parent)
+                    OnUncheck: =Remove(colSearchStatus, ThisItem);
+                    Text: =ThisItem.Value
+                    Width: =(Parent.Width - 20) / 2
+                    ZIndex: =1
+
+            cmbSearchStatus As combobox:
+                DefaultSelectedItems: =colSearchStatus.Value
+                DisplayFields: =["Value"]
+                DisplayMode: =DisplayMode.View
+                IsSearchable: =false
+                Items: =colFormStatus
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                X: =6
+                Y: =314
+                ZIndex: =7
+
+            lblSearchStatus_1 As label:
+                FontWeight: =FontWeight.Bold
+                Size: =11
+                Text: |-
+                    ="DEV List of selected status':"
+                Width: =Parent.Width * 0.95
+                X: =4
+                Y: =269
+                ZIndex: =8
+
+            Icon2 As icon.Post:
+                BorderColor: =RGBA(32, 96, 149, 1)
+                Color: =RGBA(32, 96, 149, 1)
+                Height: =32
+                Icon: =Icon.Reset
+                OnSelect: =Reset(txtSearchText);Reset(cmbSearchStatus);Clear(colSearchStatus);
+                Width: =32
+                X: =267
+                Y: =12
+                ZIndex: =9
+
+            Dropdown1 As dropdown:
+                Default: =None
+                Items: =Distinct('BSP Examples', Outcome)
+                Y: =418
+                ZIndex: =10
+
+    icoFilter As icon.FilterFlat:
+        Color: =White
+        Height: =40
+        Icon: =If(!IsBlank(txtSearchText.Text) || !IsEmpty(colSearchStatus), Icon.FilterFlatFilled, Icon.FilterFlat)
+        OnSelect: =Set(varShowFilterPane, !varShowFilterPane);
+        Tooltip: =If(varShowFilterPane, "Close filter menu", "Open filter menu")
+        Width: =40
+        X: =1316
+        Y: =84
+        ZIndex: =3
+
+    cbxShowMyItems As checkbox:
+        Height: =38
+        Text: |-
+            ="DEV: Show all items"
+        Width: =264
+        Y: =102
+        ZIndex: =5
+
+    grpNoRecordsNotif As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =8
+
+        Icon1 As icon.Heart:
+            Icon: =Icon.Information
+            Visible: =IsEmpty(galExampleItems.AllItems)
+            X: =474
+            Y: =296
+            ZIndex: =6
+
+        Label1 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =51
+            Size: =15
+            Text: ="No records match your criteria"
+            Visible: =IsEmpty(galExampleItems.AllItems)
+            Width: =1013
+            Y: =360
+            ZIndex: =7
+

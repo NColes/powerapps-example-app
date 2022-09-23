@@ -1,0 +1,123 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "new_bspexamples",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "new_bspexample",
+    "MaxGetRowsCount": 500,
+    "Name": "BSP Examples",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "new_assigneduser": "Assigned User",
+      "new_bspexample_AsyncOperations": "System Jobs",
+      "new_bspexample_BulkDeleteFailures": "Bulk Delete Failures",
+      "new_bspexample_DuplicateBaseRecord": "Duplicate Records (new_bspexample_DuplicateBaseRecord)",
+      "new_bspexample_DuplicateMatchingRecord": "Duplicate Records (new_bspexample_DuplicateMatchingRecord)",
+      "new_bspexample_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "new_bspexample_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "new_bspexample_ProcessSession": "Process Sessions",
+      "new_bspexample_SyncErrors": "Sync Errors",
+      "new_bspexampleid": "BSP Example",
+      "new_examplestatus": "Example status",
+      "new_outcome": "Outcome",
+      "new_referencenumber": "Reference Number",
+      "new_submitteddate": "Submitted Date",
+      "new_title": "Title",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "BSP Examples",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "BSP Examples (Views)",
+    "Name": "_new_bspexample_views",
+    "RelatedEntityName": "BSP Examples",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0a7fd7f1-f543-45e8-ad5c-7d057b5a48d7": "Inactive BSP Examples",
+      "3a0b578e-2cc3-4644-8e0d-ec2328f3befe": "Active BSP Examples",
+      "7593992c-c8cc-4798-8f5e-d059f0cea992": "BSP Example Lookup View",
+      "c5d8a9fc-fafe-444c-b3b0-e43823ae760e": "BSP Example Advanced Find View",
+      "fef6d881-075e-4610-b7e3-f9f5ea251a33": "BSP Example Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (BSP Examples)",
+    "Name": "new_bspexample_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "BSP Examples"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "BSP Examples",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (BSP Examples)",
+    "Name": "new_bspexample_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "BSP Examples"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "BSP Examples",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Outcome choice",
+    "Name": "new_outcomechoice",
+    "OptionSetInfoNameMapping": {
+      "100000000": "Approve",
+      "100000001": "Reject",
+      "100000002": "Awaiting outcome"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "new_outcome",
+        "OptionSetReferenceEntityName": "BSP Examples"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "new_outcome",
+    "RelatedEntityName": "BSP Examples",
+    "Type": "OptionSetInfo"
+  }
+]

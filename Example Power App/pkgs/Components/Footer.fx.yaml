@@ -1,0 +1,33 @@
+Footer As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =45
+    PublishingAdvisorLabel: ="Publishing advisor"
+    PublishingAdvisorText: ="Joe Bloggs"
+    ReferenceLabel: ="Reference"
+    ReferenceText: ="TRCK-0001"
+    StatusLabel: ="Status"
+    StatusText: ="Draft"
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =4
+
+    htmlText As htmlViewer:
+        HtmlText: |-
+            ="<b>" & Footer.ReferenceLabel & ": </b> " & Footer.ReferenceText & "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>" & Footer.StatusLabel & ": </b>" & Footer.StatusText & "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>" & Footer.PublishingAdvisorLabel & ": </b>" & Footer.PublishingAdvisorText & ""
+        Size: =14
+        Width: =App.Width -70 -70
+        X: =70
+        Y: =5
+        ZIndex: =1
+
+    icoTopLine As icon.HorizontalLine:
+        BorderColor: =RGBA(230, 230, 230, 1)
+        BorderThickness: =1
+        Color: =RGBA(230, 230, 230, 1)
+        FocusedBorderThickness: =1
+        Height: =1
+        Icon: =Icon.HorizontalLine
+        Width: =App.Width
+        ZIndex: =2
+

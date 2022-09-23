@@ -1,0 +1,301 @@
+Navigation As CanvasComponent:
+    Fill: =White
+    HeadingText: ="Sections"
+    Height: =App.Height
+    Items: |-
+        =Table(
+            {
+                MenuID: 1,
+                MenuLabel: "Information",
+                MenuScreen: App.ActiveScreen,
+                MenuLinkURL: "",
+                IsCurrent: true,
+                IsDisabled: false,
+                IsCompleted: false,
+                IsLocked: true,
+                IsValid: true,
+                IsVisible: true,
+                ErrorMessages: ""        
+            },
+            {
+                MenuID: 2,
+                MenuLabel: "Metadata",
+                MenuScreen: App.ActiveScreen,
+                MenuLinkURL: "",
+                IsCurrent: false,
+                IsDisabled: false,
+                IsCompleted: false,
+                IsLocked: true,
+                IsValid: true,
+                IsVisible: true,
+                ErrorMessages: ""
+            },
+            {
+                MenuID: 3,
+                MenuLabel: "Content",
+                MenuScreen: App.ActiveScreen,
+                MenuLinkURL: "",
+                IsCurrent: false,
+                IsDisabled: false,
+                IsCompleted: false,
+                IsLocked: false,
+                IsValid: true,
+                IsVisible: true,
+                ErrorMessages: ""
+            },
+            {
+                MenuID: 4,
+                MenuLabel: "Text",
+                MenuScreen: App.ActiveScreen,
+                MenuLinkURL: "",
+                IsCurrent: false,
+                IsDisabled: false,
+                IsCompleted: false,
+                IsLocked: false,
+                IsValid: true,
+                IsVisible: true,
+                ErrorMessages: ""
+            },
+            {
+                MenuID: 5,
+                MenuLabel: "Charts",
+                MenuScreen: App.ActiveScreen,
+                MenuLinkURL: "",
+                IsCurrent: false,
+                IsDisabled: false,
+                IsCompleted: false,
+                IsLocked: false,
+                IsValid: false,
+                IsVisible: true,
+                ErrorMessages: ""
+            },
+            {
+                MenuID: 6,
+                MenuLabel: "Interactives",
+                MenuScreen: App.ActiveScreen,
+                MenuLinkURL: "",
+                IsCurrent: false,
+                IsDisabled: false,
+                IsCompleted: false,
+                IsLocked: true,
+                IsValid: true,
+                IsVisible: true,
+                ErrorMessages: ""
+            },
+            {
+                MenuID: 7,
+                MenuLabel: "Tables",
+                MenuScreen: App.ActiveScreen,
+                MenuLinkURL: "",
+                IsCurrent: false,
+                IsDisabled: true,
+                IsCompleted: false,
+                IsLocked: false,
+                IsValid: true,
+                IsVisible: true,
+                ErrorMessages: ""
+            },
+            {
+                MenuID: 8,
+                MenuLabel: "Datasets",
+                MenuScreen: App.ActiveScreen,
+                MenuLinkURL: "",
+                IsCurrent: false,
+                IsDisabled: false,
+                IsCompleted: false,
+                IsLocked: false,
+                IsValid: true,
+                IsVisible: true,
+                ErrorMessages: ""
+            },
+            {
+                MenuID: 9,
+                MenuLabel: "PDF of datasets",
+                MenuScreen: App.ActiveScreen,
+                MenuLinkURL: "",
+                IsCurrent: false,
+                IsDisabled: false,
+                IsCompleted: false,
+                IsLocked: false,
+                IsValid: true,
+                IsVisible: true,
+                ErrorMessages: ""
+            },
+            {
+                MenuID: 10,
+                MenuLabel: "Time series",
+                MenuScreen: App.ActiveScreen,
+                MenuLinkURL: "",
+                IsCurrent: false,
+                IsDisabled: false,
+                IsCompleted: true,
+                IsLocked: false,
+                IsValid: true,
+                IsVisible: true,
+                ErrorMessages: ""
+            },
+            {
+                MenuID: 11,
+                MenuLabel: "Change log",
+                MenuScreen: App.ActiveScreen,
+                MenuLinkURL: "",
+                IsCurrent: false,
+                IsDisabled: false,
+                IsCompleted: false,
+                IsLocked: false,
+                IsValid: true,
+                IsVisible: true,
+                ErrorMessages: ""
+            },
+            {
+                MenuID: 12,
+                MenuLabel: "Sign-off",
+                MenuScreen: App.ActiveScreen,
+                MenuLinkURL: "",
+                IsCurrent: false,
+                IsDisabled: false,
+                IsCompleted: false,
+                IsLocked: false,
+                IsValid: true,
+                IsVisible: true,
+                ErrorMessages: ""
+            },
+            {
+                MenuID: 13,
+                MenuLabel: "Publishing",
+                MenuScreen: App.ActiveScreen,      
+                MenuLinkURL: "",  
+                IsCurrent: false,
+                IsDisabled: false,
+                IsCompleted: false,
+                IsLocked: false,
+                IsValid: true,
+                IsVisible: false,
+                ErrorMessages: ""
+            },    
+            {
+                MenuID: 14,
+                MenuLabel: "Tracker Documents",
+                MenuScreen: Blank(),      
+                MenuLinkURL: "https://www.google.co.uk",  
+                IsCurrent: false,
+                IsDisabled: false,
+                IsCompleted: false,
+                IsLocked: true,
+                IsValid: true,
+                IsVisible: true,
+                ErrorMessages: ""
+            }
+        )
+    OnReset: =
+    UnderlineMenuLabel: =false
+    Width: =350
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    "galSections As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =Navigation.Height - shpVerticalLine.Height - lblHeading.Height
+        Items: =Filter(Navigation.Items, IsVisible = true)
+        Layout: =Layout.Vertical
+        TemplateFill: |-
+            =If(ThisItem.MenuScreen = App.ActiveScreen,ColorValue("#e9eff4"),RGBA(0,0,0,0))
+        TemplatePadding: =0
+        TemplateSize: =35
+        Width: =Navigation.Width
+        Y: =lblHeading.Y + lblHeading.Height + shpTopVerticalLine.Height
+        ZIndex: =2
+
+        lblMenuTitle As label:
+            Color: =If(ThisItem.IsDisabled,RGBA(166, 166, 166, 1), RGBA(0, 0, 0, 1))
+            FontWeight: =FontWeight.Normal
+            Height: =35
+            OnSelect: =If(IsBlank(ThisItem.MenuLinkURL), Navigate(ThisItem.MenuScreen,ScreenTransition.None), Launch(ThisItem.MenuLinkURL, "", LaunchTarget.New))
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =13
+            Text: =ThisItem.MenuLabel
+            Underline: =Navigation.UnderlineMenuLabel
+            Width: =galSections.Width - Self.X
+            X: =icoStatus.X + icoStatus.Width + 5
+            ZIndex: =2
+
+        icoStatus As icon.Lock:
+            Color: |-
+                =If(ThisItem.IsDisabled, RGBA(166,166,166,1), If(ThisItem.IsLocked, ColorValue("#206095"), If(ThisItem.IsCompleted, ColorValue("#0f8243"), ColorValue("#d0021b"))))
+                //If(ThisItem.IsLocked,ColorValue("#206095"),If(ThisItem.IsCompleted, ColorValue("#0f8243"), ColorValue("#d0021b")))
+            Height: =20
+            Icon: =If(!IsBlank(ThisItem.MenuLinkURL), Icon.OpenInNewWindow, If(ThisItem.IsDisabled, Icon.Blocked,If(ThisItem.IsLocked, Icon.Lock, If(ThisItem.IsCompleted, Icon.Check, Icon.Information))))
+            OnSelect: =Select(Parent)
+            Visible: |+
+                =(ThisItem.IsDisabled || ThisItem.IsLocked || ThisItem.IsCompleted || !ThisItem.IsValid || !IsBlank(ThisItem.MenuLinkURL))
+                
+                
+            Width: =20
+            X: =shpVerticalLine.X + shpVerticalLine.Width + 20
+            Y: =8
+            ZIndex: =6
+
+        shpOuterBorder As rectangle:
+            Fill: |-
+                =ColorValue("#206095")
+            Height: =35
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.MenuScreen = App.ActiveScreen
+            Width: =8
+            ZIndex: =7
+
+        shpVerticalLine As rectangle:
+            Fill: |-
+                =ColorValue("#707071")
+            Height: =35
+            OnSelect: =Select(Parent)
+            Width: =1
+            X: =shpOuterBorder.X + shpOuterBorder.Width
+            ZIndex: =8
+
+        btnMenuTitle As button:
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0,0,0,0)
+            Height: =35
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =If(!ThisItem.IsDisabled, If(IsBlank(ThisItem.MenuLinkURL), Navigate(ThisItem.MenuScreen,ScreenTransition.None), Launch(ThisItem.MenuLinkURL, "", LaunchTarget.New)))
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =13
+            Text: =ThisItem.MenuLabel
+            Width: =galSections.Width - Self.X
+            X: =icoStatus.X + icoStatus.Width + 5
+            ZIndex: =9
+
+    lblHeading As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Text: =Navigation.HeadingText
+        Width: =Navigation.Width
+        ZIndex: =3
+
+    shpTopVerticalLine As rectangle:
+        Fill: |-
+            =ColorValue("#707071")
+        Height: =10
+        OnSelect: =
+        Width: =1
+        X: =8
+        Y: =lblHeading.Height
+        ZIndex: =4
+

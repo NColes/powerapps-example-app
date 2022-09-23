@@ -1,0 +1,130 @@
+CardSets As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =RoundUp(CountRows(CardSets.Items)/3, 0)*600
+    Items: |-
+        =Table(    {
+                CardID: 1,
+                CardTitle: "First item",
+                CardDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu laoreet felis, quis facilisis arcu. Duis est tortor, tristique nec pulvinar quis, tempus lacinia sem. Mauris et lorem aliquet, ullamcorper libero posuere, vestibulum risus. Nunc maximus elit ac mauris hendrerit, nec volutpat mi accumsan. Pellentesque faucibus dui vitae eros consequat auctor. Aliquam porttitor nulla gravida, mollis erat in, tincidunt est. Morbi at nunc quis leo vehicula bibendum vel at turpis. Suspendisse sit amet ex vitae orci elementum condimentum. \nUt ac ligula quis quam convallis sollicitudin. Proin maximus massa quis justo feugiat, vel auctor mauris aliquam. Sed varius purus quis dui.",
+                CardImage: "",
+                CardImageAltText: "",
+                CardScreen: App.ActiveScreen,
+                IsVisible: true,
+                ErrorMessages: ""
+            },
+            {
+                CardID: 2,
+                CardTitle: "Second item",
+                CardDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu laoreet felis, quis facilisis arcu. Duis est tortor, tristique nec pulvinar quis, tempus lacinia sem. Mauris et lorem aliquet, ullamcorper libero posuere, vestibulum risus. Nunc maximus elit ac mauris hendrerit, nec volutpat mi accumsan. Pellentesque faucibus dui vitae eros consequat auctor. Aliquam porttitor nulla gravida, mollis erat in, tincidunt est. Morbi at nunc quis leo vehicula bibendum vel at turpis. Suspendisse sit amet ex vitae orci elementum condimentum. \nUt ac ligula quis quam convallis sollicitudin. Proin maximus massa quis justo feugiat, vel auctor mauris aliquam. Sed varius purus quis dui.",
+                CardImage: "",
+                CardImageAltText: "",
+                CardScreen: App.ActiveScreen,
+                IsVisible: true,
+                ErrorMessages: ""
+            },
+            {
+                CardID: 3,
+                CardTitle: "Third item",
+                CardDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu laoreet felis, quis facilisis arcu. Duis est tortor, tristique nec pulvinar quis, tempus lacinia sem. Mauris et lorem aliquet, ullamcorper libero posuere, vestibulum risus. Nunc maximus elit ac mauris hendrerit, nec volutpat mi accumsan. Pellentesque faucibus dui vitae eros consequat auctor. Aliquam porttitor nulla gravida, mollis erat in, tincidunt est. Morbi at nunc quis leo vehicula bibendum vel at turpis. Suspendisse sit amet ex vitae orci elementum condimentum. \nUt ac ligula quis quam convallis sollicitudin. Proin maximus massa quis justo feugiat, vel auctor mauris aliquam. Sed varius purus quis dui.",
+                CardImage: "",
+                CardImageAltText: "",
+                CardScreen: App.ActiveScreen,
+                IsVisible: true,
+                ErrorMessages: ""
+            },
+            {
+                CardID: 4,
+                CardTitle: "Fourth item",
+                CardDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu laoreet felis, quis facilisis arcu. Duis est tortor, tristique nec pulvinar quis, tempus lacinia sem. Mauris et lorem aliquet, ullamcorper libero posuere, vestibulum risus. Nunc maximus elit ac mauris hendrerit, nec volutpat mi accumsan. Pellentesque faucibus dui vitae eros consequat auctor. Aliquam porttitor nulla gravida, mollis erat in, tincidunt est. Morbi at nunc quis leo vehicula bibendum vel at turpis. Suspendisse sit amet ex vitae orci elementum condimentum. \nUt ac ligula quis quam convallis sollicitudin. Proin maximus massa quis justo feugiat, vel auctor mauris aliquam. Sed varius purus quis dui.",
+                CardImage: "",
+                CardImageAltText: "",
+                CardScreen: App.ActiveScreen,
+                IsVisible: true,
+                ErrorMessages: ""
+            },
+            {
+                CardID: 5,
+                CardTitle: "Fifth item",
+                CardDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu laoreet felis, quis facilisis arcu. Duis est tortor, tristique nec pulvinar quis, tempus lacinia sem. Mauris et lorem aliquet, ullamcorper libero posuere, vestibulum risus. Nunc maximus elit ac mauris hendrerit, nec volutpat mi accumsan. Pellentesque faucibus dui vitae eros consequat auctor. Aliquam porttitor nulla gravida, mollis erat in, tincidunt est. Morbi at nunc quis leo vehicula bibendum vel at turpis. Suspendisse sit amet ex vitae orci elementum condimentum. \nUt ac ligula quis quam convallis sollicitudin. Proin maximus massa quis justo feugiat, vel auctor mauris aliquam. Sed varius purus quis dui.",
+                CardImage: "",
+                CardImageAltText: "",
+                CardScreen: App.ActiveScreen,
+                IsVisible: true,
+                ErrorMessages: ""
+            },
+            {
+                CardID: 6,
+                CardTitle: "Sixth item",
+                CardDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu laoreet felis, quis facilisis arcu. Duis est tortor, tristique nec pulvinar quis, tempus lacinia sem. Mauris et lorem aliquet, ullamcorper libero posuere, vestibulum risus. Nunc maximus elit ac mauris hendrerit, nec volutpat mi accumsan. Pellentesque faucibus dui vitae eros consequat auctor. Aliquam porttitor nulla gravida, mollis erat in, tincidunt est. Morbi at nunc quis leo vehicula bibendum vel at turpis. Suspendisse sit amet ex vitae orci elementum condimentum. \nUt ac ligula quis quam convallis sollicitudin. Proin maximus massa quis justo feugiat, vel auctor mauris aliquam. Sed varius purus quis dui.",
+                CardImage: "",
+                CardImageAltText: "",
+                CardScreen: App.ActiveScreen,
+                IsVisible: true,
+                ErrorMessages: ""
+            })
+    Width: =Max(App.Width, CountRows(CardSets.Items)*200)
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    "galCards As gallery.'BrowseLayout_Vertical_TwoTextOneImageTwoColumnVariant_ver4.0'":
+        Height: =1200
+        Items: =Filter(CardSets.Items, IsVisible = true)
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =600
+        Width: =Max(App.Width, 1200)
+        WrapCount: =3
+        ZIndex: =1
+
+        imgCardImage As image:
+            AccessibleLabel: =ThisItem.CardImageAltText
+            Height: =296
+            Image: =If(!IsBlank(ThisItem.CardImage), ThisItem.CardImage, SampleImage)
+            ImagePosition: =ImagePosition.Fill
+            OnSelect: =Navigate(ThisItem.CardScreen)
+            PaddingLeft: =20
+            PaddingRight: =20
+            Width: =Parent.TemplateWidth - 32
+            X: =16
+            Y: =16
+            ZIndex: =1
+
+        lblCardDescription As label:
+            Height: =202
+            OnSelect: =
+            Overflow: =Overflow.Scroll
+            PaddingBottom: =0
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =0
+            Text: =ThisItem.CardDescription
+            VerticalAlign: =VerticalAlign.Top
+            Width: =(Parent.Width/3)*0.9
+            X: =22
+            Y: =btnCardTitle.Y + btnCardTitle.Height + 8
+            ZIndex: =3
+
+        btnCardTitle As button:
+            Align: =Align.Left
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(32, 96, 149, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =367
+            HoverBorderColor: =ColorFade(RGBA(32, 96, 149, 1), -50%)
+            HoverColor: =ColorFade(Self.Color, -100%)
+            HoverFill: =RGBA(0,0,0,0)
+            OnSelect: =Navigate(ThisItem.CardScreen)
+            PaddingBottom: =0
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =0
+            PressedFill: =
+            Size: =22
+            Text: =ThisItem.CardTitle
+            Underline: =true
+            VerticalAlign: =VerticalAlign.Bottom
+            Width: =(Parent.Width/3)*0.9
+            X: =(Parent.TemplateWidth / 2) - (Self.Width / 2)
+            ZIndex: =4
+

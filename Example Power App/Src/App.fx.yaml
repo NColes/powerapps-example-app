@@ -1,0 +1,28 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =//Get the current users email on app start rather than repeating throughout, used often and frequently throughout many of our processes.
+        Set(gblCurrentUserEmail, User().Email);
+        //Create a collection of colours used throughout the app and the header text used throughout
+        Set(
+            AppConfig,
+            {
+                HeaderText: "BSP Example Canvas App",
+                PrimaryFillColor: ColorValue("#003C57"),
+                SecondaryFillColor: ColorValue("#003C57"),
+                PrimaryTextColor: ColorValue("#222222"),
+                PrimaryBorderColor: ColorValue("#222222"),
+                DisabledFillColor: ColorValue("#F5F5F6"),
+                DisabledBorderColor: ColorValue("#E2E2E3"),
+                DisabledChevronColor: ColorValue("#BCBCBD"),
+                ValidationErrorFillColor: ColorValue("#FAE6E8"),
+                ValidationErrorColor: ColorValue("#D0021B"),
+                PrimaryButtonColor: ColorValue("#0F8243"),
+                SecondaryButtonColor: ColorValue("#E2E2E3"),
+                GhostButtonColor: ColorValue("#206095"),
+                SeparatorColor: ColorValue("#E6ECEE"),
+                NextButtonColor: ColorValue("#00A3A6")
+            }
+        );
+    StartScreen: ='Home Screen'
+
