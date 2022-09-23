@@ -28,3 +28,9 @@ Screen1 As screen:
         Y: =105
         ZIndex: =5
 
+    Label6 As label:
+        Text: ="naff button ->"
+        X: =508
+        Y: =105
+        ZIndex: =6
+
