@@ -22,3 +22,9 @@ Screen1 As screen:
         Y: =193
         ZIndex: =4
 
+    Button1 As button:
+        Text: ="Button"
+        X: =724
+        Y: =105
+        ZIndex: =5
+
