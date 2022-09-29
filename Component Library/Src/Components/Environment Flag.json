@@ -1,0 +1,63 @@
+{
+  "ComponentAllowCustomization": true,
+  "ComponentChangedSinceFileImport": true,
+  "ComponentManifest": {
+    "AllowAccessToGlobals": false,
+    "AllowCustomization": true,
+    "Description": "",
+    "Name": "Environment Flag",
+    "TemplateGuid": "de4ffee6af124283938c94429814af05"
+  },
+  "ComponentType": "CanvasComponent",
+  "CustomGroupControlTemplateName": "",
+  "CustomProperties": [
+    {
+      "Category": 0,
+      "DisplayName": "Bar Height",
+      "Hidden": false,
+      "Name": "BarHeight",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Height of the bar",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Bar Colour",
+      "Hidden": false,
+      "Name": "BarColour",
+      "PropertyDataTypeKey": "Color",
+      "Tooltip": "Colour of the bar",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Dev Tenant ID",
+      "Hidden": false,
+      "Name": "DevTenantID",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "ID of the Dev tenant",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Flag Text",
+      "Hidden": false,
+      "Name": "FlagText",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Text of the Flag",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    }
+  ],
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/Component",
+  "IsComponentLocked": false,
+  "IsComponentTemplate": true,
+  "IsCustomGroupControlTemplate": false,
+  "IsPcfControl": false,
+  "IsPremiumPcfControl": false,
+  "IsWidgetTemplate": false,
+  "LastModifiedTimestamp": "638000513629832093",
+  "Name": "de4ffee6af124283938c94429814af05",
+  "OverridableProperties": {},
+  "Version": "638000488672952304"
+}

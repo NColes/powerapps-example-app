@@ -1,35 +1,28 @@
 {
   "ComponentIndexes": {
-    "Component1": 1,
-    "Component2": 2,
-    "Component3": 3
+    "Environment Flag": 1
   },
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
     "App": 1,
     "Button1": 5,
-    "Component1": 3,
-    "Component2": 6,
-    "Component3": 7,
-    "Label1": 8,
-    "Screen1": 4
+    "Environment Flag": 3,
+    "lblFlag": 10,
+    "Screen1": 4,
+    "shpBar": 9
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "09/29/2022 11:57:23",
+  "HeaderLastSavedDateTimeUTC": "09/29/2022 12:30:30",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},
   "LocalResourceRootPaths": {},
   "OrderComponentMetadata": {
-    "375347777d5943368a65a96fa7d6132c": 2,
-    "818f8dbb7b5348d9b3caead9dfe2fcd6": 1,
     "de4ffee6af124283938c94429814af05": 0
   },
   "OrderComponentTemplate": {
-    "375347777d5943368a65a96fa7d6132c": 2,
-    "818f8dbb7b5348d9b3caead9dfe2fcd6": 1,
     "de4ffee6af124283938c94429814af05": 0
   },
   "OrderDataSource": {},
@@ -38,16 +31,16 @@
   "OrderTemplate": {},
   "OrderXMLTemplate": {
     "button": 0,
-    "label": 1
+    "label": 1,
+    "rectangle": 2
   },
   "PublishOrderIndices": {
     "App": 0,
-    "Button1": 4,
-    "Component1": 1,
-    "Component2": 0,
-    "Component3": 0,
-    "Label1": 0,
-    "Screen1": 3
+    "Button1": 0,
+    "Environment Flag": 1,
+    "lblFlag": 1,
+    "Screen1": 3,
+    "shpBar": 2
   },
   "ResourcesJsonIndices": {},
   "RuleScreenIdWithoutScreen": {},
