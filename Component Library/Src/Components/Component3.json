@@ -5,8 +5,8 @@
     "AllowAccessToGlobals": false,
     "AllowCustomization": true,
     "Description": "",
-    "Name": "Component1",
-    "TemplateGuid": "de4ffee6af124283938c94429814af05"
+    "Name": "Component3",
+    "TemplateGuid": "375347777d5943368a65a96fa7d6132c"
   },
   "ComponentType": "CanvasComponent",
   "CustomGroupControlTemplateName": "",
@@ -19,8 +19,8 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638000494278226091",
-  "Name": "de4ffee6af124283938c94429814af05",
+  "LastModifiedTimestamp": "638000494373790555",
+  "Name": "375347777d5943368a65a96fa7d6132c",
   "OverridableProperties": {},
-  "Version": "638000488672952304"
+  "Version": "638000494373499835"
 }
