@@ -1,12 +1,12 @@
 "'Environment Flag' As CanvasComponent":
     BarColour: |-
         =//RGBA(0, 204, 102, 1)
-        Switch('Environment Flag'.DevTenantID, "96e35044-2fa7-4e11-9e11-6fb8978ab1e2", RGBA(15, 130, 67, 1), "e46e97bd-30e0-47b7-93c6-fdd32981e599", RGBA(208, 2, 27, 1))
+        Switch('Environment Flag'.TenantID, "96e35044-2fa7-4e11-9e11-6fb8978ab1e2", RGBA(15, 130, 67, 1), "e46e97bd-30e0-47b7-93c6-fdd32981e599", RGBA(208, 2, 27, 1))
     BarHeight: =40
-    DevTenantID: ="96e35044-2fa7-4e11-9e11-6fb8978ab1e2"
     Fill: =RGBA(0, 0, 0, 0)
-    FlagText: =Switch('Environment Flag'.DevTenantID, "96e35044-2fa7-4e11-9e11-6fb8978ab1e2", "Dev", "e46e97bd-30e0-47b7-93c6-fdd32981e599", "UAT")
+    FlagText: =Switch('Environment Flag'.TenantID, "96e35044-2fa7-4e11-9e11-6fb8978ab1e2", "Dev", "e46e97bd-30e0-47b7-93c6-fdd32981e599", "UAT")
     Height: =640
+    TenantID: ="96e35044-2fa7-4e11-9e11-6fb8978ab1e2"
     Width: =900
     X: =0
     Y: =0

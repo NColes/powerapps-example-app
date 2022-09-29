@@ -31,11 +31,11 @@
     },
     {
       "Category": 0,
-      "DisplayName": "Dev Tenant ID",
+      "DisplayName": "Tenant ID",
       "Hidden": false,
-      "Name": "DevTenantID",
+      "Name": "TenantID",
       "PropertyDataTypeKey": "String",
-      "Tooltip": "ID of the Dev tenant",
+      "Tooltip": "ID of the tenant",
       "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
@@ -56,7 +56,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638000513629832093",
+  "LastModifiedTimestamp": "638000514702353977",
   "Name": "de4ffee6af124283938c94429814af05",
   "OverridableProperties": {},
   "Version": "638000488672952304"

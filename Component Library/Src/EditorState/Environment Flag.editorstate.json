@@ -25,14 +25,7 @@
           "NameMapSourceSchema": "?"
         },
         "BarHeight",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "\"Text\"",
-          "InvariantPropertyName": "DevTenantID",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "TenantID",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -66,7 +59,7 @@
         },
         {
           "Category": "Data",
-          "PropertyName": "DevTenantID",
+          "PropertyName": "TenantID",
           "RuleProviderType": "System"
         },
         {
